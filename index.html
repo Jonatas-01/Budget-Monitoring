@@ -23,30 +23,26 @@
         <h1>Finance Monitoring</h1>
         <p>Monitoring your expenses allows you to see where your money is going, identify unnecessary spending, and adjust to stay within your budget. By keeping track, you can save more, avoid debt, and work toward your financial goals with confidence.</p>
     </header>
-
+    <div id="header-background"></div>
     <!-- Salary box -->
-    <div class="input-box" id="salary-box">
+    <div class="input-box hide" id="salary-box">
         <h2>Enter your monthly wages below:</h2>
         <form id="salary-form">
             <p>Salary:</p>
-            <div class="salary-div-form">
-                <input type="number" id="salary-input" name="salary-input">
-                <input type="button" value="Send">
-            </div>
+            <input class="typenumb" type="number" id="salary-input" name="salary-input" placeholder="£">
+            <span class="btn"><input type="button" value="Send"></span>
         </form>
     </div>
 
     <!-- Expenses Box -->
-    <div class="input-box" id="expenses-box">
+    <div class="input-box hide" id="expenses-box">
         <h2>Enter your monthly expenses below:</h2>
         <form id="expenses-form">
             <p>Expenses:</p>
-            <input type="number" name="expenses-input" id="expenses-input">
-
+            <input class="typenumb" type="number" name="expenses-input" id="expenses-input" placeholder="£">
             <p>Category:</p>
-            <input type="number" name="category-input" id="category-input">
-
-            <input type="button" value="Send">
+            <input class="typenumb" type="number" name="category-input" id="category-input" placeholder="">
+            <span class="btn"><input type="button" value="Send"></span>
         </form>
     </div>
 
