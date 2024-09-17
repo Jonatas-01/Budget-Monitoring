@@ -27,16 +27,16 @@ header h1{
     font-size: 42px;
     font-weight: 600;
     margin-bottom: 12px;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 header p{
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .input-box{
     padding: 20px;
-    margin: 15px;
+    margin: 20px;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 20px;
     z-index: 99;
@@ -86,7 +86,7 @@ form{
 #header-background{
     height: 470px;
     width: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(0, 150, 135, 0.800)90%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(0, 150, 135, 0.60)90%);
     position: absolute;
     z-index: 2;
     top: 0;
@@ -94,7 +94,6 @@ form{
     border-radius: 0 0 24px;
 }
 
-
-/* .hide{
+.hide{
     display: none;
-} */
+}
