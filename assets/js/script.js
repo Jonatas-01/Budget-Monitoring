@@ -10,7 +10,6 @@ let expensesBox = document.getElementById('expenses-box')
 // Functions
 function salary() {
     if(salaryInput.value !== ''){
-
         salaryBox.classList.add('hide')
         expensesBox.classList.remove('hide')
     

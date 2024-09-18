@@ -85,6 +85,10 @@ form{
     font-size: 15px;
 }
 
+.btn input:hover{
+    background-color: #00968769;
+}
+
 /* Background on top of the page */
 #header-background{
     height: 470px;
