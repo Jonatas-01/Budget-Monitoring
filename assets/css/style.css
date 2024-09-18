@@ -66,8 +66,14 @@ form{
 .typenumb{
     padding: 14px 20px;
     border-radius: 15px;
-    border: 1px solid #007e71;
+    border: 1px solid rgb(94, 94, 94);
     margin-bottom: 20px;
+    outline: none;
+    font-weight: 500;
+}
+
+.typenumb:focus{
+    border: 2px solid #007e71;
 }
 
 .typenumb::placeholder{
