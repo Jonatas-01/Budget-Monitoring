@@ -28,7 +28,7 @@ header h1{
     font-size: 42px;
     font-weight: 600;
     margin-bottom: 12px;
-    padding: 0 15px;
+    padding: 0 25px;
 }
 
 header p{
@@ -109,9 +109,29 @@ form{
     background-color: #0096878e;
     padding: 10px;
     justify-content: space-between;
-    margin: 5px 20px;
+    margin: 5px 20px 0px;
+    font-weight: 500;
 }
 
 .hide{
     display: none;
+}
+
+table{
+    margin: 0 20px;
+    width: auto;
+    border-collapse: collapse;
+}
+
+table th{
+    font-weight: 500;
+    width: 33vw;
+    background-color: #d4d4d4;
+    padding: 4px;
+    border: 1px solid rgb(88, 88, 88);
+}
+
+table td{
+    border: 1px solid rgb(88, 88, 88);
+    padding: 3px 3px 3px 10px;
 }

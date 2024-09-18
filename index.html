@@ -41,23 +41,22 @@
             <p>Expenses:</p>
             <input class="typenumb" type="number" name="expenses-input" id="expenses-input" placeholder="£">
             <p>Category:</p>
-            <input class="typenumb" type="number" name="category-input" id="category-input" placeholder="">
-            <span class="btn"><input type="button" value="Send"></span>
+            <input class="typenumb" type="text" name="category-input" id="category-input" placeholder="">
+            <span class="btn"><input type="button" value="Send" onclick="expenses()"></span>
         </form>
     </div>
 
     <!-- Table -->
     <div class="hide" id="table-div">
         <div id="table-header"></div>
-        <table>
+        <table id="tbl">
             <tr>
                 <th>Category</th>
                 <th>Value</th>
                 <th>Percentage</th>
             </tr>
-            <tr>
-                <td></td>
-            </tr>
+
+            
         </table>
     </div>
 
