@@ -31,18 +31,24 @@ function salary() {
 function expenses(){
     let percentage = (expensesInput.value * 100) / salaryInput.value
 
-    let tr = document.createElement('tr')
-    let tdCateg = document.createElement('td')
-    let tdValue = document.createElement('td')
-    let tdPercent = document.createElement('td')
+    if(expensesInput.value && categoryInput.value){
+        let tr = document.createElement('tr')
+        let tdCateg = document.createElement('td')
+        let tdValue = document.createElement('td')
+        let tdPercent = document.createElement('td')
 
-    tdCateg.innerHTML = categoryInput.value
-    tdValue.innerHTML = expensesInput.value
-    tdPercent.innerHTML = percentage
+        tdCateg.innerHTML = categoryInput.value
+        tdValue.innerHTML = `${expensesInput.value} £`
+        tdPercent.innerHTML = `${percentage} %`
 
-    tr.appendChild(tdCateg)
-    tr.appendChild(tdValue)
-    tr.appendChild(tdPercent)
+        tr.appendChild(tdCateg)
+        tr.appendChild(tdValue)
+        tr.appendChild(tdPercent)
 
-    table.appendChild(tr)
+        table.appendChild(tr)
+
+        expensesInput.value = ''
+        categoryInput.value = ''
+        expensesInput.focus()
+    }
 }

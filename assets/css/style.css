@@ -102,6 +102,10 @@ form{
 }
 
 /* Table div */
+#table-div h2{
+    margin: 10px 20px 8px 20px;
+}
+
 #table-header{
     display: flex ;
     flex-direction: row;
