@@ -53,6 +53,11 @@ header p{
     margin-bottom: 13px;
 }
 
+.input-box p{
+    color: rgb(94, 94, 94);
+    margin-bottom: 3px;
+}
+
 form{
     display: flex;
     flex-direction: column;
