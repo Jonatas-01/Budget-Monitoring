@@ -8,6 +8,7 @@ let salaryBox = document.getElementById('salary-box')
 let expensesBox = document.getElementById('expenses-box')
 let tableDiv = document.getElementById('table-div')
 let tableHeader = document.getElementById('table-header')
+let table = document.getElementById('tbl')
 
 // Functions
 function salary() {
@@ -25,4 +26,23 @@ function salary() {
         tableHeader.appendChild(tableSP)
     }
 
+}
+
+function expenses(){
+    let percentage = (expensesInput.value * 100) / salaryInput.value
+
+    let tr = document.createElement('tr')
+    let tdCateg = document.createElement('td')
+    let tdValue = document.createElement('td')
+    let tdPercent = document.createElement('td')
+
+    tdCateg.innerHTML = categoryInput.value
+    tdValue.innerHTML = expensesInput.value
+    tdPercent.innerHTML = percentage
+
+    tr.appendChild(tdCateg)
+    tr.appendChild(tdValue)
+    tr.appendChild(tdPercent)
+
+    table.appendChild(tr)
 }
