@@ -39,7 +39,7 @@ function expenses(){
 
         tdCateg.innerHTML = categoryInput.value
         tdValue.innerHTML = `${expensesInput.value} £`
-        tdPercent.innerHTML = `${percentage} %`
+        tdPercent.innerHTML = `${percentage.toFixed(1)} %`
 
         tr.appendChild(tdCateg)
         tr.appendChild(tdValue)
