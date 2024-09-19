@@ -10,6 +10,9 @@ let tableDiv = document.getElementById('table-div')
 let tableHeader = document.getElementById('table-header')
 let table = document.getElementById('tbl')
 
+// Format Numbers
+const format = new Intl.NumberFormat('en')
+
 // Functions
 function salary() {
     if(salaryInput.value !== ''){
@@ -18,14 +21,13 @@ function salary() {
         tableDiv.classList.remove('hide')
     
         let tableFP = document.createElement('p')
-        tableFP.innerHTML = `Salary: ${salaryInput.value}`
+        tableFP.innerHTML = `Salary: ${format.format(salaryInput.value)} £`
         tableHeader.appendChild(tableFP)
 
         let tableSP = document.createElement('p')
-        tableSP.innerHTML = `Balance: ${salaryInput.value} `
+        tableSP.innerHTML = `Balance: ${format.format(salaryInput.value)} £`
         tableHeader.appendChild(tableSP)
     }
-
 }
 
 function expenses(){
@@ -38,7 +40,7 @@ function expenses(){
         let tdPercent = document.createElement('td')
 
         tdCateg.innerHTML = categoryInput.value
-        tdValue.innerHTML = `${expensesInput.value} £`
+        tdValue.innerHTML = `${format.format(expensesInput.value)} £`
         tdPercent.innerHTML = `${percentage.toFixed(1)} %`
 
         tr.appendChild(tdCateg)
