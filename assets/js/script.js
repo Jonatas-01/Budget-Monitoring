@@ -9,6 +9,7 @@ let expensesBox = document.getElementById('expenses-box')
 let tableDiv = document.getElementById('table-div')
 let tableHeader = document.getElementById('table-header')
 let table = document.getElementById('tbl')
+let validation = document.getElementsByClassName('validation')
 
 // Format Numbers
 const format = new Intl.NumberFormat('en')
@@ -27,6 +28,9 @@ function salary() {
         let tableSP = document.createElement('p')
         tableSP.innerHTML = `Balance: ${format.format(salaryInput.value)} £`
         tableHeader.appendChild(tableSP)
+    } else{
+        salaryInput.style.border = '1px solid red'
+        validation[0].style.display = 'block'
     }
 }
 
@@ -49,8 +53,24 @@ function expenses(){
 
         table.appendChild(tr)
 
+        // Remove old value and focus on firts input
         expensesInput.value = ''
         categoryInput.value = ''
         expensesInput.focus()
+
+        // remove the required style after submit
+        expensesInput.style.border = ''
+        validation[1].style.display = 'none'
+        categoryInput.style.border = ''
+        validation[2].style.display = 'none'
+    } else{
+        if(expensesInput.value === ''){
+            expensesInput.style.border = '1px solid red'
+            validation[1].style.display = 'block'
+        }
+        if(categoryInput.value === ''){
+            categoryInput.style.border = '1px solid red'
+            validation[2].style.display = 'block'
+        }
     }
 }
