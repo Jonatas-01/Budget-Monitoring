@@ -86,9 +86,9 @@ form{
 .validation{
     display: none;
     margin-top: -20px;
-    font-size: 13px;
+    font-size: 14px;
     color: red;
-    font-weight: 400;
+    font-weight: 450;
     padding-left: 4px;
     margin-bottom: 5px;
 }
@@ -106,6 +106,7 @@ form{
     font-size: 15px;
     font-weight: 500;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .btn input:hover{
