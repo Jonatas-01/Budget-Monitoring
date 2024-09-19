@@ -20,11 +20,11 @@ function salary() {
         tableDiv.classList.remove('hide')
     
         let tableFP = document.createElement('p')
-        tableFP.innerHTML = `Salary: ${format.format(salaryInput.value)} £`
+        tableFP.innerHTML = `Salary: ${format.format(salaryInput.value)}£`
         tableHeader.appendChild(tableFP)
 
         let tableSP = document.createElement('p')
-        tableSP.innerHTML = `Balance: ${format.format(salaryInput.value)} £`
+        tableSP.innerHTML = `Balance: ${format.format(salaryInput.value)}£`
         tableHeader.appendChild(tableSP)
     } else{
         salaryInput.style.border = '1px solid red'
@@ -50,6 +50,8 @@ function expenses(){
         tr.appendChild(tdPercent)
 
         table.appendChild(tr)
+
+        // 
 
         // Remove old value and focus on firts input
         expensesInput.value = ''
