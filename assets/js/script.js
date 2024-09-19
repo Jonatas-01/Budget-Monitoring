@@ -26,6 +26,7 @@ function salary() {
         let tableSP = document.createElement('p')
         tableSP.innerHTML = `Balance: ${format.format(salaryInput.value)}£`
         tableHeader.appendChild(tableSP)
+        tableSP.classList.add('balance-p')
     } else{
         salaryInput.style.border = '1px solid red'
         validation[0].style.display = 'block'
@@ -51,7 +52,8 @@ function expenses(){
 
         table.appendChild(tr)
 
-        // 
+        // Change Balance in table header
+        balance()
 
         // Remove old value and focus on firts input
         expensesInput.value = ''
@@ -73,4 +75,11 @@ function expenses(){
             validation[2].style.display = 'block'
         }
     }
+}
+
+function balance(){
+    let balanceP = document.querySelector('.balance-p')
+    salaryInput.value -= expensesInput.value
+
+    balanceP.innerText = `Balance: ${salaryInput.value}£`
 }
