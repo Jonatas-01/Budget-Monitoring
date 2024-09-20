@@ -31,6 +31,7 @@ function salary() {
         salaryInput.style.border = '1px solid red'
         validation[0].style.display = 'block'
     }
+    expensesInput.focus()
 }
 
 function expenses(){
@@ -41,6 +42,11 @@ function expenses(){
         let tdCateg = document.createElement('td')
         let tdValue = document.createElement('td')
         let tdPercent = document.createElement('td')
+        let tdDelete = document.createElement('td')
+
+        let btn = document.createElement('button')
+        btn.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
+        tdDelete.appendChild(btn)
 
         tdCateg.innerHTML = categoryInput.value
         tdValue.innerHTML = `${format.format(expensesInput.value)} £`
@@ -49,8 +55,11 @@ function expenses(){
         tr.appendChild(tdCateg)
         tr.appendChild(tdValue)
         tr.appendChild(tdPercent)
+        tr.appendChild(tdDelete)
 
         table.appendChild(tr)
+
+        tdDelete.addEventListener('click', deleteRow)
 
         // Change Balance in table header
         balance()
@@ -79,7 +88,9 @@ function expenses(){
 
 function balance(){
     let balanceP = document.querySelector('.balance-p')
-    salaryInput.value -= expensesInput.value
+    balanceP.innerText = `Balance: ${salaryInput.value -= expensesInput.value}£`
+}
 
-    balanceP.innerText = `Balance: ${salaryInput.value}£`
+function deleteRow(){
+    
 }
