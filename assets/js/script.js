@@ -38,6 +38,7 @@ function expenses(){
     let percentage = (expensesInput.value * 100) / salaryInput.value
 
     if(expensesInput.value && categoryInput.value){
+        // Create a row
         let tr = document.createElement('tr')
         let tdCateg = document.createElement('td')
         let tdValue = document.createElement('td')
@@ -59,6 +60,7 @@ function expenses(){
 
         table.appendChild(tr)
 
+        // Delete function
         tdDelete.addEventListener('click', deleteRow)
 
         // Change Balance in table header
@@ -92,5 +94,7 @@ function balance(){
 }
 
 function deleteRow(){
-    
+    this.parentElement.remove()
+    let balanceP = document.querySelector('.balance-p')
+    balanceP.innerText = `Balance: ${format.format(salaryInput.value += expensesInput.value)}£`
 }
