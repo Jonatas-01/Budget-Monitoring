@@ -70,6 +70,7 @@ form{
     margin-bottom: 20px;
     outline: none;
     font-weight: 500;
+    text-transform: capitalize;
 }
 
 .typenumb:focus{
@@ -165,4 +166,16 @@ table th{
 table td{
     border: 1px solid rgb(88, 88, 88);
     padding: 3px 3px 3px 10px;
+    text-align: center;
+}
+
+
+table td button{
+    border-radius: 45%;
+    padding: 4px;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    
 }
