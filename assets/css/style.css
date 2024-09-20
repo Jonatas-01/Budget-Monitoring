@@ -165,7 +165,7 @@ table th{
 
 table td{
     border: 1px solid rgb(88, 88, 88);
-    padding: 3px 3px 3px 10px;
+    padding: 3px 3px 3px 3px;
     text-align: center;
 }
 
@@ -178,6 +178,7 @@ table td button{
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    background-color: white;
 }
 
 table td button:hover{

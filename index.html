@@ -26,12 +26,12 @@
     <div id="header-background"></div>
     <!-- Salary box -->
     <div class="input-box" id="salary-box">
-        <h2>Enter your monthly wages below:</h2>
+        <h2>Enter your monthly wage below:</h2>
         <form id="salary-form">
             <p>Salary:</p>
             <input class="typenumb" type="number" id="salary-input" name="salary-input" placeholder="£">
             <span class="validation">Salary value required</span>
-            <span class="btn"><input type="button" value="Send" onclick="salary()"></span>
+            <span class="btn"><input type="button" value="Set Salary" onclick="salary()"></span>
         </form>
     </div>
 
@@ -39,7 +39,7 @@
     <div class="input-box hide" id="expenses-box">
         <h2>Enter your monthly expenses below:</h2>
         <form id="expenses-form">
-            <p>Expenses:</p>
+            <p>Value of expense:</p>
             <input class="typenumb" type="number" name="expenses-input" id="expenses-input" placeholder="£">
             <span class="validation">Expenses value required</span>
             <p>Category:</p>
@@ -51,7 +51,7 @@
 
     <!-- Table -->
     <div class="hide" id="table-div">
-        <h2>Your expenses table:</h2>
+        <h2>Your expense table:</h2>
         <div id="table-header"></div>
         <table id="tbl">
             <tr>
