@@ -127,8 +127,25 @@ form{
 }
 
 /* Table div */
-#table-div h2{
+.table-title{
     margin: 10px 20px 8px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table-title button{
+    background-color: #01bdaa0c;
+    border: 1px solid #007e71;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #009688;
+    font-weight: 500;
+    padding: 2px;
+}
+
+.table-title h2{
+    
     font-weight: 500;
     font-size: 20px;
 }
