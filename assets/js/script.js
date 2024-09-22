@@ -1,6 +1,10 @@
 // Get Elements
-let salaryInput = document.getElementById('salary-input')
-let expensesInput = document.getElementById('expenses-input')
+let salaryInputEl = document.getElementById('salary-input')
+let expensesInputEl = document.getElementById('expenses-input')
+let salaryFix = document.getElementById('salary-fix')
+let balanceAmount = document.getElementById('balance-amount')
+
+
 let categoryInput = document.getElementById('category-input')
 let salaryBox = document.getElementById('salary-box')
 let expensesBox = document.getElementById('expenses-box')
@@ -8,31 +12,44 @@ let tableDiv = document.getElementById('table-div')
 let tableHeader = document.getElementById('table-header')
 let table = document.getElementById('tbl')
 let validation = document.getElementsByClassName('validation')
+let buttonSalary = document.getElementById('btn-sal')
 
 // Format Numbers
 const format = new Intl.NumberFormat('en')
 
-// Functions
-function salary() {
-    if(salaryInput.value !== ''){
+// Salary Function
+function salaryFunc() {
+    const salaryValue = salaryInputEl.value
+    
+    if(salaryValue == '' || salaryValue < 0){
+        salaryInputEl.style.border = '1px solid red'
+        validation[0].style.display = 'block'
+    } else{
+        salaryFix.textContent = salaryValue
+        salaryInputEl.value = ""
+        showBalance()
+
         salaryBox.classList.add('hide')
         expensesBox.classList.remove('hide')
         tableDiv.classList.remove('hide')
-    
-        let tableFP = document.createElement('p')
-        tableFP.innerHTML = `Salary: ${format.format(salaryInput.value)}£`
-        tableHeader.appendChild(tableFP)
 
-        let tableSP = document.createElement('p')
-        tableSP.innerHTML = `Balance: <span id="current-amount">${format.format(salaryInput.value)}</span>£`
-        tableHeader.appendChild(tableSP)
-        tableSP.classList.add('balance-p')
-    } else{
-        salaryInput.style.border = '1px solid red'
-        validation[0].style.display = 'block'
     }
-    expensesInput.focus()
+    expensesInputEl.focus()
 }
+
+// Balance Function
+function showBalance(){
+    const expenses = totalExpenses()
+    const total = parseInt(salaryFix.textContent) - expenses
+    balanceAmount.textContent = total
+}
+
+// Calculate Expenses Function
+function totalExpenses(){
+    let total = 50
+    return total
+}
+
 
 function expenses(){
     let percentage = (expensesInput.value * 100) / salaryInput.value

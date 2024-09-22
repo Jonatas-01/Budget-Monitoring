@@ -31,7 +31,7 @@
             <p>Salary:</p>
             <input class="typenumb" type="number" id="salary-input" name="salary-input" placeholder="£">
             <span class="validation">Value cannot be empty</span>
-            <span class="btn"><input type="button" value="Set Salary" onclick="salary()"></span>
+            <span class="btn"><input type="button" value="Set Salary" onclick="salaryFunc()"></span>
         </form>
     </div>
 
@@ -50,12 +50,15 @@
     </div>
 
     <!-- Table -->
-    <div class="hide" id="table-div">
+    <div class="" id="table-div">
         <div class="table-title">
             <h2>Your expense table:</h2>
             <button id="btn-sal">Change salary value</button>
         </div>
-        <div id="table-header"></div>
+        <div id="table-header">
+            <p>Salary: <span id="salary-fix">3,904</span> £</p>
+            <p>Balance: <span id="balance-amount">2,567</span> £</p>
+        </div>
         <table id="tbl">
             <tr>
                 <th>Category</th>
