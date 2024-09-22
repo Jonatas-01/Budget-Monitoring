@@ -1,11 +1,13 @@
 // Get Elements
-let salaryInputEl = document.getElementById('salary-input')
-let salaryFix = document.getElementById('salary-fix')
-let balanceAmount = document.getElementById('balance-amount')
+const salaryInputEl = document.getElementById('salary-input')
+const salaryFix = document.getElementById('salary-fix')
+const balanceAmount = document.getElementById('balance-amount')
 
-let expensesInputEl = document.getElementById('expenses-input')
-let categoryInputEl = document.getElementById('category-input')
+const expensesInputEl = document.getElementById('expenses-input')
+const categoryInputEl = document.getElementById('category-input')
 
+let itemList = []
+let itemId = 0
 
 let salaryBox = document.getElementById('salary-box')
 let expensesBox = document.getElementById('expenses-box')
@@ -62,7 +64,7 @@ function expenses(){
         categoryInputEl.value = ""
         
         // Store the value inside the object
-        
+
     } else{
         if(expensesAmountValue === ''){
             expensesInputEl.style.border = '1px solid red'
