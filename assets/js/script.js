@@ -9,13 +9,14 @@ const categoryInputEl = document.getElementById('category-input')
 let itemList = []
 let itemId = 0
 
+const table = document.getElementById('tbl')
 let salaryBox = document.getElementById('salary-box')
 let expensesBox = document.getElementById('expenses-box')
 let tableDiv = document.getElementById('table-div')
-let tableHeader = document.getElementById('table-header')
-let table = document.getElementById('tbl')
 let validation = document.getElementsByClassName('validation')
+
 let buttonSalary = document.getElementById('btn-sal')
+let tableHeader = document.getElementById('table-header')
 
 // Format Numbers
 const format = new Intl.NumberFormat('en')
@@ -48,7 +49,14 @@ function showBalance(){
 
 // Calculate Expenses Function
 function totalExpenses(){
-    let total = 50
+    let total = 0
+
+    if(itemList.length > 0){
+        total = itemList.reduce(function (acc, curr){
+            acc += curr.amount
+            return acc
+        }, 0)
+    }
     return total
 }
 
@@ -56,15 +64,29 @@ function totalExpenses(){
 function expenses(){
     let expensesAmountValue = expensesInputEl.value
     let expenseCategValue = categoryInputEl.value
-    
+    let percentageValue = (expensesAmountValue * 100) / salaryFix.textContent
     if(expensesAmountValue && expenseCategValue){
         let amount = expensesAmountValue
 
         expensesInputEl.value = ""
         categoryInputEl.value = ""
         
-        // Store the value inside the object
+        // store the value inside the object
+        let expenses = {
+            id: itemId,
+            title: expenseCategValue,
+            amount: amount,
+            percent: percentageValue.toFixed(1),
+        }
+        itemId++
+        itemList.push(expenses)
 
+        // add expenses to HTML page
+        addExpenses(expenses)
+        showBalance()
+
+        // go back to expenses input after send the details
+        expensesInputEl.focus()
     } else{
         if(expensesAmountValue === ''){
             expensesInputEl.style.border = '1px solid red'
@@ -76,67 +98,16 @@ function expenses(){
                 validation[2].style.display = 'block'
         }
     }
-    // let percentage = (expensesInput.value * 100) / salaryInput.value
-
-    // if(expensesInput.value && categoryInput.value){
-    //     // Create a row
-    //     let tr = document.createElement('tr')
-    //     let tdCateg = document.createElement('td')
-    //     let tdValue = document.createElement('td')
-    //     let tdPercent = document.createElement('td')
-    //     let tdDelete = document.createElement('td')
-
-    //     let btn = document.createElement('button')
-    //     btn.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
-    //     tdDelete.appendChild(btn)
-
-    //     tdCateg.innerHTML = categoryInput.value
-    //     tdValue.innerHTML = `<span id="expense-value">${format.format(expensesInput.value)}</span> £`
-    //     tdPercent.innerHTML = `${percentage.toFixed(1)} %`
-
-    //     tr.appendChild(tdCateg)
-    //     tr.appendChild(tdValue)
-    //     tr.appendChild(tdPercent)
-    //     tr.appendChild(tdDelete)
-
-    //     table.appendChild(tr)
-
-        // Delete function
-        // tdDelete.addEventListener('click', deleteRow)
-
-        // Change Balance in table header
-        // balance()
-
-        // Remove old value and focus on firts input
-        // expensesInput.value = ''
-        // categoryInput.value = ''
-        // expensesInput.focus()
-
-        // // remove the required style after submit
-        // expensesInput.style.border = ''
-        // validation[1].style.display = 'none'
-        // categoryInput.style.border = ''
-        // validation[2].style.display = 'none'
-    // } else{
-    //     if(expensesInput.value === ''){
-    //         expensesInput.style.border = '1px solid red'
-    //         validation[1].style.display = 'block'
-    //     }
-    //     if(categoryInput.value === ''){
-    //         categoryInput.style.border = '1px solid red'
-    //         validation[2].style.display = 'block'
-    //     }
-    // }
 }
 
-function balance(){
-    let currentAmount = document.getElementById('current-amount')
-    currentAmount.innerHTML = `${salaryInput.value -= expensesInput.value}`
+function addExpenses(expensesParamenter){
+    const html = `
+        <tr>
+            <td>${expensesParamenter.title}</td>
+            <td>${expensesParamenter.amount} £</td>
+            <td>${expensesParamenter.percent}%</td>
+            <td><button><i class="fa-solid fa-trash-can"></i></button</td>
+        </tr>`
+    
+    table.innerHTML += html 
 }
-
-// function deleteRow(){
-//     let currentAmount = document.getElementById('current-amount')
-//     let expenseValue = document.getElementById('expense-value')
-//     currentAmount.innerHTML = `${Number(currentAmount.value) + Number(expenseValue.value)}`
-//     this.parentElement.remove()
-// }
