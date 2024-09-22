@@ -1,11 +1,12 @@
 // Get Elements
 let salaryInputEl = document.getElementById('salary-input')
-let expensesInputEl = document.getElementById('expenses-input')
 let salaryFix = document.getElementById('salary-fix')
 let balanceAmount = document.getElementById('balance-amount')
 
+let expensesInputEl = document.getElementById('expenses-input')
+let categoryInputEl = document.getElementById('category-input')
 
-let categoryInput = document.getElementById('category-input')
+
 let salaryBox = document.getElementById('salary-box')
 let expensesBox = document.getElementById('expenses-box')
 let tableDiv = document.getElementById('table-div')
@@ -32,7 +33,6 @@ function salaryFunc() {
         salaryBox.classList.add('hide')
         expensesBox.classList.remove('hide')
         tableDiv.classList.remove('hide')
-
     }
     expensesInputEl.focus()
 }
@@ -50,59 +50,81 @@ function totalExpenses(){
     return total
 }
 
-
+// Expenses Function
 function expenses(){
-    let percentage = (expensesInput.value * 100) / salaryInput.value
+    let expensesAmountValue = expensesInputEl.value
+    let expenseCategValue = categoryInputEl.value
+    
+    if(expensesAmountValue && expenseCategValue){
+        let amount = expensesAmountValue
 
-    if(expensesInput.value && categoryInput.value){
-        // Create a row
-        let tr = document.createElement('tr')
-        let tdCateg = document.createElement('td')
-        let tdValue = document.createElement('td')
-        let tdPercent = document.createElement('td')
-        let tdDelete = document.createElement('td')
+        expensesInputEl.value = ""
+        categoryInputEl.value = ""
+        
+        // Store the value inside the object
+        
+    } else{
+        if(expensesAmountValue === ''){
+            expensesInputEl.style.border = '1px solid red'
+            validation[1].style.display = 'block'
+        }
 
-        let btn = document.createElement('button')
-        btn.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
-        tdDelete.appendChild(btn)
+        if(expenseCategValue === ''){
+                categoryInputEl.style.border = '1px solid red'
+                validation[2].style.display = 'block'
+        }
+    }
+    // let percentage = (expensesInput.value * 100) / salaryInput.value
 
-        tdCateg.innerHTML = categoryInput.value
-        tdValue.innerHTML = `<span id="expense-value">${format.format(expensesInput.value)}</span> £`
-        tdPercent.innerHTML = `${percentage.toFixed(1)} %`
+    // if(expensesInput.value && categoryInput.value){
+    //     // Create a row
+    //     let tr = document.createElement('tr')
+    //     let tdCateg = document.createElement('td')
+    //     let tdValue = document.createElement('td')
+    //     let tdPercent = document.createElement('td')
+    //     let tdDelete = document.createElement('td')
 
-        tr.appendChild(tdCateg)
-        tr.appendChild(tdValue)
-        tr.appendChild(tdPercent)
-        tr.appendChild(tdDelete)
+    //     let btn = document.createElement('button')
+    //     btn.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
+    //     tdDelete.appendChild(btn)
 
-        table.appendChild(tr)
+    //     tdCateg.innerHTML = categoryInput.value
+    //     tdValue.innerHTML = `<span id="expense-value">${format.format(expensesInput.value)}</span> £`
+    //     tdPercent.innerHTML = `${percentage.toFixed(1)} %`
+
+    //     tr.appendChild(tdCateg)
+    //     tr.appendChild(tdValue)
+    //     tr.appendChild(tdPercent)
+    //     tr.appendChild(tdDelete)
+
+    //     table.appendChild(tr)
 
         // Delete function
         // tdDelete.addEventListener('click', deleteRow)
 
         // Change Balance in table header
-        balance()
+        // balance()
 
         // Remove old value and focus on firts input
-        expensesInput.value = ''
-        categoryInput.value = ''
-        expensesInput.focus()
+        // expensesInput.value = ''
+        // categoryInput.value = ''
+        // expensesInput.focus()
 
-        // remove the required style after submit
-        expensesInput.style.border = ''
-        validation[1].style.display = 'none'
-        categoryInput.style.border = ''
-        validation[2].style.display = 'none'
-    } else{
-        if(expensesInput.value === ''){
-            expensesInput.style.border = '1px solid red'
-            validation[1].style.display = 'block'
-        }
-        if(categoryInput.value === ''){
-            categoryInput.style.border = '1px solid red'
-            validation[2].style.display = 'block'
-        }
-    }
+        // // remove the required style after submit
+        // expensesInput.style.border = ''
+        // validation[1].style.display = 'none'
+        // categoryInput.style.border = ''
+        // validation[2].style.display = 'none'
+    // } else{
+    //     if(expensesInput.value === ''){
+    //         expensesInput.style.border = '1px solid red'
+    //         validation[1].style.display = 'block'
+    //     }
+    //     if(categoryInput.value === ''){
+    //         categoryInput.style.border = '1px solid red'
+    //         validation[2].style.display = 'block'
+    //     }
+    // }
 }
 
 function balance(){
