@@ -198,6 +198,10 @@ table td button{
     background-color: white;
 }
 
+.fa-solid, fa-trash-can{
+    pointer-events: none;
+}
+
 table td button:hover{
     scale: 108%;
 }
