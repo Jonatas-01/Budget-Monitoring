@@ -25,7 +25,6 @@ function salaryFunc() {
         validation[0].style.display = 'block'
     } else{
         salaryFix.textContent = salaryValue
-        salaryInputEl.value = ""
         showBalance()
 
         salaryBox.classList.add('hide')
@@ -110,3 +109,10 @@ expenseList.addEventListener('click', (e) =>{
         showBalance()
     }
 })
+
+// Edit salary function
+function editSalary(){
+    salaryBox.classList.remove('hide')
+    expensesBox.classList.add('hide')
+    tableDiv.classList.add('hide')
+}
