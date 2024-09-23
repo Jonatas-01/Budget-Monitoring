@@ -2,22 +2,19 @@
 const salaryInputEl = document.getElementById('salary-input')
 const salaryFix = document.getElementById('salary-fix')
 const balanceAmount = document.getElementById('balance-amount')
-
 const expensesInputEl = document.getElementById('expenses-input')
 const categoryInputEl = document.getElementById('category-input')
-
+const table = document.getElementById('tbl')
+const salaryBox = document.getElementById('salary-box')
+const expensesBox = document.getElementById('expenses-box')
+const tableDiv = document.getElementById('table-div')
+const validation = document.getElementsByClassName('validation')
+const deleteBtn = document.getElementsByClassName('btn-delete')
+const buttonSalary = document.getElementById('btn-sal')
+const tableHeader = document.getElementById('table-header')
 let itemList = []
 let itemId = 0
 let salaryValue = 0
-
-const table = document.getElementById('tbl')
-let salaryBox = document.getElementById('salary-box')
-let expensesBox = document.getElementById('expenses-box')
-let tableDiv = document.getElementById('table-div')
-const validation = document.getElementsByClassName('validation')
-
-let buttonSalary = document.getElementById('btn-sal')
-let tableHeader = document.getElementById('table-header')
 
 // Format Numbers
 const format = new Intl.NumberFormat('en')
@@ -103,6 +100,5 @@ function addExpenses(expensesParamenter){
             <td>${expensesParamenter.percent}%</td>
             <td><button class="btn-delete"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`
-    
     table.innerHTML += html 
 }
