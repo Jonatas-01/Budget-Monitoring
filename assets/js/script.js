@@ -8,12 +8,13 @@ const categoryInputEl = document.getElementById('category-input')
 
 let itemList = []
 let itemId = 0
+let salaryValue = 0
 
 const table = document.getElementById('tbl')
 let salaryBox = document.getElementById('salary-box')
 let expensesBox = document.getElementById('expenses-box')
 let tableDiv = document.getElementById('table-div')
-let validation = document.getElementsByClassName('validation')
+const validation = document.getElementsByClassName('validation')
 
 let buttonSalary = document.getElementById('btn-sal')
 let tableHeader = document.getElementById('table-header')
@@ -23,7 +24,7 @@ const format = new Intl.NumberFormat('en')
 
 // Salary Function
 function salaryFunc() {
-    const salaryValue = salaryInputEl.value
+    salaryValue = salaryInputEl.value
     
     if(salaryValue == '' || salaryValue < 0){
         salaryInputEl.style.border = '1px solid red'
@@ -43,20 +44,13 @@ function salaryFunc() {
 // Balance Function
 function showBalance(){
     const expenses = totalExpenses()
-    const total = parseInt(salaryFix.textContent) - expenses
+    const total = parseInt(salaryFix.textContent) + expenses
     balanceAmount.textContent = total
 }
 
 // Calculate Expenses Function
 function totalExpenses(){
-    let total = 0
-
-    if(itemList.length > 0){
-        total = itemList.reduce(function (acc, curr){
-            acc += curr.amount
-            return acc
-        }, 0)
-    }
+    const total = itemList.reduce((sum, expense) => sum - expense.amount, 0)
     return total
 }
 
@@ -100,13 +94,14 @@ function expenses(){
     }
 }
 
+// Add content in HTML page
 function addExpenses(expensesParamenter){
     const html = `
         <tr>
             <td>${expensesParamenter.title}</td>
             <td>${expensesParamenter.amount} £</td>
             <td>${expensesParamenter.percent}%</td>
-            <td><button><i class="fa-solid fa-trash-can"></i></button</td>
+            <td><button class="btn-delete"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`
     
     table.innerHTML += html 
