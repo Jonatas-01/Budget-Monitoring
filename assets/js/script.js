@@ -51,7 +51,6 @@ function totalExpenses(){
 function expenses(){
     let expensesAmountValue = expensesInputEl.value
     let expenseCategValue = categoryInputEl.value
-    let percentageValue = (expensesAmountValue * 100) / salaryFix.textContent
     if(expensesAmountValue && expenseCategValue){
         let amount = expensesAmountValue
 
@@ -63,7 +62,6 @@ function expenses(){
             id: itemId,
             title: expenseCategValue,
             amount: amount,
-            percent: percentageValue.toFixed(1),
         }
         itemId++
         itemList.push(expenses)
@@ -93,7 +91,6 @@ function addExpenses(expenses){
         <tr>
             <td>${expenses.title}</td>
             <td>${expenses.amount} £</td>
-            <td>${expenses.percent}%</td>
             <td><button class="btn-delete" data-id="${expenses.id}"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`
     expenseList.innerHTML += html 
