@@ -205,3 +205,19 @@ table td button{
 table td button:hover{
     scale: 108%;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    header p {
+        font-size: large;
+        padding: 0 35px;
+    }
+
+    .input-box{
+        margin: 20px 30px;
+    }
+
+    #header-background{
+        height: 390px;
+    }
+    
+}
