@@ -100,11 +100,13 @@ function addExpenses(expenses){
     expenseList.innerHTML += html 
 }
 
+// Delete Row Function
 expenseList.addEventListener('click', (e) =>{
     if(e.target.classList.contains("btn-delete")){
         const id = parseInt(e.target.dataset.id)
         itemList = itemList.filter(expenses => expenses.id !== id)
-        this.parentElement.remove()
+        let element = e.target.parentElement.parentElement
+        element.remove()
         showBalance()
     }
 })
