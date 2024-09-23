@@ -28,7 +28,7 @@ header h1{
     font-size: 42px;
     font-weight: 600;
     margin-bottom: 12px;
-    padding: 0 25px;
+    padding: 0 34px;
 }
 
 header p{
@@ -48,7 +48,7 @@ header p{
 }
 
 .input-box h2{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     margin-bottom: 13px;
 }
@@ -184,6 +184,7 @@ table td{
     border: 1px solid rgb(88, 88, 88);
     padding: 3px 3px 3px 3px;
     text-align: center;
+    text-transform: capitalize;
 }
 
 
@@ -206,7 +207,8 @@ table td button:hover{
     scale: 108%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
+/* Tablet media screen */
+@media screen and (min-width: 528px) and (max-width: 1023px){
     header p {
         font-size: large;
         padding: 0 35px;
@@ -219,5 +221,70 @@ table td button:hover{
     #header-background{
         height: 390px;
     }
+
+    #table-div{
+        margin-top: 40px;
+    }
+
+    .table-title button{
+        font-size: 16px;
+    }
     
+}
+
+@media screen and (min-width: 1024px) {
+    .header-container{
+        display: flex;
+        height: 450px;
+        align-items: center;
+    }
+
+    header{
+        margin-left: 40px;
+        width: 50%;
+        align-items: center;
+        text-align: start;
+        align-items: start;
+        position: relative;
+        top: -50px;
+    }
+
+    header img{
+        margin-bottom: 60px;
+    }
+
+    header h1{
+        padding: 0;
+    }
+
+    header p {
+        padding: 0;
+    }
+
+    .input-box{
+        width: 50%;
+        margin: 20px 90px;
+        box-shadow: 5px 6px 12px 5px #61616152;
+    }
+
+    #header-background{
+        width: 80vw;
+        height: 450px;
+    }
+
+    #table-div{
+        margin-top: 40px;
+    }
+
+    .table-title button{
+        font-size: large;
+    }
+
+    #table-header{
+        font-size: 20px;
+    }
+
+    table tbody{
+        font-size: 18px;
+    }
 }
