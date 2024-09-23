@@ -4,14 +4,11 @@ const salaryFix = document.getElementById('salary-fix')
 const balanceAmount = document.getElementById('balance-amount')
 const expensesInputEl = document.getElementById('expenses-input')
 const categoryInputEl = document.getElementById('category-input')
-const table = document.getElementById('tbl')
 const salaryBox = document.getElementById('salary-box')
 const expensesBox = document.getElementById('expenses-box')
 const tableDiv = document.getElementById('table-div')
 const validation = document.getElementsByClassName('validation')
-const deleteBtn = document.getElementsByClassName('btn-delete')
-const buttonSalary = document.getElementById('btn-sal')
-const tableHeader = document.getElementById('table-header')
+const expenseList = document.getElementById('expense-list')
 let itemList = []
 let itemId = 0
 let salaryValue = 0
@@ -92,13 +89,22 @@ function expenses(){
 }
 
 // Add content in HTML page
-function addExpenses(expensesParamenter){
+function addExpenses(expenses){
     const html = `
         <tr>
-            <td>${expensesParamenter.title}</td>
-            <td>${expensesParamenter.amount} £</td>
-            <td>${expensesParamenter.percent}%</td>
-            <td><button class="btn-delete"><i class="fa-solid fa-trash-can"></i></button</td>
+            <td>${expenses.title}</td>
+            <td>${expenses.amount} £</td>
+            <td>${expenses.percent}%</td>
+            <td><button class="btn-delete" data-id="${expenses.id}"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`
-    table.innerHTML += html 
+    expenseList.innerHTML += html 
 }
+
+expenseList.addEventListener('click', (e) =>{
+    if(e.target.classList.contains("btn-delete")){
+        const id = parseInt(e.target.dataset.id)
+        itemList = itemList.filter(expenses => expenses.id !== id)
+        this.parentElement.remove()
+        showBalance()
+    }
+})
