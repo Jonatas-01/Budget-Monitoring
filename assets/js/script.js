@@ -13,9 +13,6 @@ let itemList = []
 let itemId = 0
 let salaryValue = 0
 
-// Format Numbers
-const format = new Intl.NumberFormat('en')
-
 // Salary Function
 function salaryFunc() {
     salaryValue = salaryInputEl.value
