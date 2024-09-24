@@ -214,14 +214,30 @@ table td button:hover{
     z-index: 3;
 }
 
+.image-coin img{
+    position: relative;
+    z-index: 3;
+}
+
 #image-background{
     height: 300px;
     width: 100vw;
     background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(0, 150, 135, 0.40)90%);
     border-radius: 0 0 25px 25px;
     position: absolute;
-    bottom: 90px;
+    bottom: 60px;
     z-index: 2;
+}
+
+.container-div h2{
+    padding: 0 80px 10px 20px;
+    font-size: 28px;
+}
+
+.container-div p{
+    padding: 0 20px;
+    margin-bottom: 40px;
+    text-align: start;
 }
 
 /* Tablet media screen */
@@ -247,18 +263,24 @@ table td button:hover{
         font-size: 16px;
     }
     
-    .image-div{
+    .container-div{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     .image-coin{
-        width: 80%;
+        width: 50%;
+    }
+
+    .text-image{
+        width: 50%;
     }
 
     #image-background{
-        
+        width: 100%;
+        bottom: 60px;
+        height: 200px;
     }
 }
 
@@ -316,5 +338,26 @@ table td button:hover{
 
     table tbody{
         font-size: 18px;
+    }
+
+    .container-div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 40px;
+    }
+
+    .image-coin{
+        width: 50%;
+    }
+
+    .text-image{
+        width: 50%;
+    }
+
+    #image-background{
+        width: 100%;
+        bottom: 60px;
+        height: 200px;
     }
 }
