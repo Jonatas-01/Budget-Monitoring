@@ -167,6 +167,8 @@ form{
 }
 
 table{
+    position: relative;
+    z-index: 3;
     margin: 0 20px;
     width: auto;
     border-collapse: collapse;
@@ -207,8 +209,23 @@ table td button:hover{
     scale: 108%;
 }
 
+.image-coin{
+    position: relative;
+    z-index: 3;
+}
+
+#image-background{
+    height: 300px;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(0, 150, 135, 0.40)90%);
+    border-radius: 0 0 25px 25px;
+    position: absolute;
+    bottom: 90px;
+    z-index: 2;
+}
+
 /* Tablet media screen */
-@media screen and (min-width: 528px) and (max-width: 1023px){
+@media screen and (min-width: 650px) and (max-width: 1023px){
     header p {
         font-size: large;
         padding: 0 35px;
@@ -230,6 +247,19 @@ table td button:hover{
         font-size: 16px;
     }
     
+    .image-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-coin{
+        width: 80%;
+    }
+
+    #image-background{
+        
+    }
 }
 
 @media screen and (min-width: 1024px) {
