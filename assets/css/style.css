@@ -105,10 +105,10 @@ form{
     border-radius: 8px;
     border: 1px solid #8f8f8f;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 550;
     transition: 0.3s;
     cursor: pointer;
-    color: #007e71;
+    color: #00645a;
 }
 
 .btn input:hover{
@@ -250,7 +250,7 @@ table td button{
 }
 
 .cards i{
-    padding-right: 4px;
+    padding-right: 6px;
 }
 
 .cards p{
