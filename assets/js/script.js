@@ -18,8 +18,12 @@ function salaryFunc() {
     salaryValue = salaryInputEl.value
     
     if(salaryValue == '' || salaryValue < 0){
-        salaryInputEl.style.border = '1px solid red'
+        salaryInputEl.style.border = '2px solid red'
         validation[0].style.display = 'block'
+        setTimeout(()=>{
+            validation[0].style.display = 'none'
+            salaryInputEl.style.border = ''
+        }, 2500)
     } else{
         salaryFix.textContent = salaryValue
         showBalance()
@@ -70,14 +74,22 @@ function expenses(){
         // go back to expenses input after send the details
         expensesInputEl.focus()
     } else{
-        if(expensesAmountValue === ''){
-            expensesInputEl.style.border = '1px solid red'
+        if(expensesAmountValue === '' || expensesAmountValue < 0){
+            expensesInputEl.style.border = '2px solid red'
             validation[1].style.display = 'block'
+            setTimeout(()=>{
+                validation[1].style.display = 'none'
+                expensesInputEl.style.border = ''
+            }, 2500)
         }
 
         if(expenseCategValue === ''){
-                categoryInputEl.style.border = '1px solid red'
+                categoryInputEl.style.border = '2px solid red'
                 validation[2].style.display = 'block'
+                setTimeout(()=>{
+                    validation[2].style.display = 'none'
+                    categoryInputEl.style.border = ''
+                }, 2500)
         }
     }
 }
