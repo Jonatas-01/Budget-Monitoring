@@ -235,7 +235,7 @@ table td button:hover{
 }
 
 .text-image h2{
-    padding: 0 80px 10px 20px;
+    padding: 20px 80px 10px 20px;
     font-size: 28px;
 }
 
@@ -243,6 +243,41 @@ table td button:hover{
     padding: 0 20px;
     margin-bottom: 40px;
     text-align: start;
+}
+
+.cards{
+    margin: 30px 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 16px 8px #00736841;
+    border-radius: 15px;
+}
+
+.cards i{
+    padding-right: 4px;
+}
+
+.cards p{
+    padding: 12px 0px;
+}
+
+.fa-piggy-bank{
+    color: pink
+}
+
+.fa-house-fire{
+    color: red;
+}
+
+.fa-credit-card{
+    color: rgb(153, 0, 255);
+}
+
+.fa-basket-shopping{
+    color: rgb(209, 209, 36)
+}
+
+.fa-coins{
+    color: green;
 }
 
 /* Tablet media screen */
