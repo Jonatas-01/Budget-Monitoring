@@ -108,6 +108,7 @@ form{
     font-weight: 500;
     transition: 0.3s;
     cursor: pointer;
+    color: #007e71;
 }
 
 .btn input:hover{
