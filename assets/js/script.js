@@ -39,7 +39,7 @@ function salaryFunc() {
 function showBalance(){
     const expenses = totalExpenses()
     const total = parseInt(salaryFix.textContent) + expenses
-    balanceAmount.textContent = total
+    balanceAmount.textContent = total.toFixed(1)
 }
 
 // Calculate Expenses Function
