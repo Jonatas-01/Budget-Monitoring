@@ -323,6 +323,18 @@ table td button:hover{
         bottom: 0px;
         height: 200px;
     }
+
+    .cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .cards{
+        max-width: 44%;
+        padding: 20px;
+        margin-bottom: 0px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -421,6 +433,18 @@ table td button:hover{
     .text-image p {
         font-size: 1.2rem;
         padding: 0 60px;
+    }
+
+    .cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .cards{
+        max-width: 400px;
+        padding: 20px;
+        margin-bottom: 10px;
     }
 
 }
