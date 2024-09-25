@@ -206,10 +206,6 @@ table td button{
     pointer-events: none;
 }
 
-table td button:hover{
-    scale: 108%;
-}
-
 .container-div{
     margin-top: 20px;
 }
