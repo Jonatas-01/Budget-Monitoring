@@ -371,7 +371,7 @@ table td button{
     }
 
     #header-background{
-        width: 80vw;
+        width: 75vw;
         height: 450px;
     }
 
@@ -405,6 +405,7 @@ table td button{
 
     .image-coin img{
         height: 90%;
+        width: 90%;
     }
 
     #image-background{
