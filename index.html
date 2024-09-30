@@ -29,43 +29,38 @@
         <div id="header-background"></div>
         <!-- Salary box -->
         <div class="input-box" id="salary-box">
-            <h2>Enter your monthly wage below:</h2>
+            <h2>Enter your details below:</h2>
             <form id="salary-form">
                 <p>Salary:</p>
                 <input class="typenumb" type="number" id="salary-input" name="salary-input" placeholder="£">
                 <span class="validation">Value cannot be empty, negative or contains letter</span>
                 <span class="btn"><input type="button" value="Set Salary" onclick="salaryFunc()"></span>
-            </form>
-        </div>
-    
-        <!-- Expenses Box -->
-        <div class="input-box hide" id="expenses-box">
-            <h2>Enter your monthly expenses below:</h2>
-            <form id="expenses-form">
+
                 <p>Value of expense:</p>
                 <input class="typenumb" type="number" name="expenses-input" id="expenses-input" placeholder="£">
                 <span class="validation">Value cannot be empty, negative or contains letter</span>
-                <p>Category:</p>
+                <p>Name:</p>
                 <input class="typenumb" type="text" name="category-input" id="category-input" placeholder="">
                 <span class="validation">Value cannot be empty</span>
                 <span class="btn"><input type="button" value="Send" onclick="expenses()"></span>
             </form>
         </div>
+    
     </div>
     <!-- Table -->
-    <div class="hide" id="table-div">
+    <div id="table-div">
         <div class="table-title">
             <h2>Your expense table:</h2>
-            <button aria-label="edit salary" id="btn-sal" onclick="editSalary()">Edit Salary</button>
+            <!-- <button aria-label="edit salary" id="btn-sal" onclick="editSalary()">Edit Salary</button> -->
         </div>
         <div id="table-header">
-            <p>Salary: <span id="salary-fix">3,904</span> £</p>
-            <p>Balance: <span id="balance-amount">2,567</span> £</p>
+            <p>Salary: <span id="salary-fix">0</span> £</p>
+            <p>Balance: <span id="balance-amount">0</span> £</p>
         </div>
         <table>
             <thead>
                 <tr>
-                    <th>Category</th>
+                    <th>Name</th>
                     <th>Value</th>
                     <th>Delete</th>
                 </tr>
