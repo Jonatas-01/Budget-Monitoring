@@ -28,11 +28,10 @@ function salaryFunc() {
     salaryFix.textContent = salaryValue;
     showBalance();
 
-    salaryBox.classList.add("hide");
-    expensesBox.classList.remove("hide");
-    tableDiv.classList.remove("hide");
+    salaryInputEl.value = localStorage.getItem('salary')
   }
   expensesInputEl.focus();
+  storeData();
 }
 
 // Balance Function
@@ -40,6 +39,7 @@ function showBalance() {
   const expenses = totalExpenses();
   const total = parseInt(salaryFix.textContent) + expenses;
   balanceAmount.textContent = total.toFixed(1);
+  storeData();
 }
 
 // Calculate Expenses Function
@@ -52,7 +52,7 @@ function totalExpenses() {
 function expenses() {
   let expensesAmountValue = expensesInputEl.value;
   let expenseCategValue = categoryInputEl.value;
-  if (expensesAmountValue && expenseCategValue) {
+  if (expensesAmountValue && expenseCategValue && salaryValue) {
     let amount = expensesAmountValue;
 
     expensesInputEl.value = "";
@@ -91,10 +91,19 @@ function expenses() {
         categoryInputEl.style.border = "";
       }, 2500);
     }
+
+    if (salaryValue == "" || salaryValue < 0) {
+      salaryInputEl.style.border = "2px solid red";
+      validation[0].style.display = "block";
+      setTimeout(() => {
+        validation[0].style.display = "none";
+        salaryInputEl.style.border = "";
+      }, 2500);
+    } 
   }
 }
 
-// Add content in HTML page
+// Add expenses in HTML page
 function addExpenses(expenses) {
   const html = `
         <tr>
@@ -103,6 +112,7 @@ function addExpenses(expenses) {
             <td><button class="btn-delete" data-id="${expenses.id}"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`;
   expenseList.innerHTML += html;
+  storeData();
 }
 
 // Delete Row Function
@@ -113,6 +123,7 @@ expenseList.addEventListener("click", (e) => {
     let element = e.target.parentElement.parentElement;
     element.remove();
     showBalance();
+    storeData();
   }
 });
 
@@ -122,3 +133,18 @@ function editSalary() {
   expensesBox.classList.add("hide");
   tableDiv.classList.add("hide");
 }
+
+// Store data
+function storeData(){
+  localStorage.setItem('table', expenseList.innerHTML);
+  localStorage.setItem('salary', salaryFix.innerHTML);
+  localStorage.setItem('balance', balanceAmount.innerHTML);
+}
+
+// Show table
+function showData(){
+  expenseList.innerHTML = localStorage.getItem('table');
+  salaryFix.innerHTML = localStorage.getItem('salary')
+  balanceAmount.innerHTML = localStorage.getItem('balance');
+}
+showData();
