@@ -9,11 +9,12 @@ The user will be able to identify any problem with your expenses by checking the
 ## User Stories
 
 ### User
-> As a user I want
-> As a user I want
-> As a user I want
-> As a user I want 
-> As a user I want
+> As a user I want to be able to set my monthly wages . 
+> As a user I want to be able to set my expenses details, as value and name.    
+> As a user I want to have a clar table with my expenses details.   
+> As a user I want to be able to see my balance after send expenses.    
+> As a user I want to be able to delete an expense in case I sent the wrong details.    
+> As a user I want to be able to see my budget after reload the page.   
 
 ### Business Owner
 >As the site owner I want to   
