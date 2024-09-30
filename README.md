@@ -19,9 +19,9 @@ The user will be able to identify any problem with your expenses by checking the
 ### Business Owner
 >As the site owner I want to provide a clear website design to users.    
 >As the site owner I want to provide a box where the users can insert the respective details.   
->As the site owner I want to prevent the user from submitting wrong details.  
->As the site owner I want to help user to track their expenses and reduce their debt.   
->As the site owner I want to show a table with all the details the user sent.   
+>As the site owner I want to prevent the user from submitting wrong details.    
+>As the site owner I want to help user to track their expenses and reduce their debt.   
+>As the site owner I want to show a table with all the details the user sent.   
 >As the site owner I want to prevent people from having financial leaks.    
 
 ## Features
