@@ -79,7 +79,7 @@ The user will be able to identify any problem with your expenses by checking the
 
 ![Mobile Wireframe part2]()
 
-> The color patern in mainly white and green. White is to create a clean aspect in website, and green because is reminds money.
+> The color pattern in mainly white and green. White is to create a clean aspect in the website, and green because it reminds money.
 
 > The website design is meant to be modern and minimalist.
 
@@ -92,8 +92,8 @@ The user will be able to identify any problem with your expenses by checking the
 |Set salary button add data to head table | Pass|
 |Expenses details button creating a row in table| Pass |
 |Created row is not placed on top of other elements| Pass |
-|User prevented from submitting form without correct element| Pass |
-|Form Validation presents when incorrect input type is entered | Pass |
+|User prevented from submitting the form without correct element| Pass |
+|Form Validation presents the when incorrect input type is entered | Pass |
 |Data stored in browser | Pass |
 
 **Testing for responsiveness**
@@ -111,7 +111,9 @@ The user will be able to identify any problem with your expenses by checking the
 
 - __Unfixed Bugs__
 
-- 
+    - After the user sends all the details and reloads the browser, the user cannot send another expense because the salary input is empty. The website does not recognize that the salary was sent in another section.
+    
+    ![Salary Bug]()
 
 ### Validator Testing
 
@@ -123,11 +125,14 @@ The user will be able to identify any problem with your expenses by checking the
     
 - CSS
     - No errors were returned when passing through the official (Jigsaw) validator
-    ![W3C CSS]()
+    ![Jigsaw CSS]()
 - Accessibility
     - Lighthouse test index.html
     ![Accessibility]()
 
+- JavaScript
+    - No errors were returned when passing through the official (JShint) validator
+    ![JShint]()
 
 ## Deployment
 
@@ -138,7 +143,7 @@ The user will be able to identify any problem with your expenses by checking the
 
   > I then received a notification from GitHub that my project is being deployed and after about 1 minute & a couple of refreshes of the page it was ready and live.
 
-The live link can be found here - 
+The live link can be found here - https://jonatas-01.github.io/Budget-Monitoring/
 
 ## Credits
  > 
