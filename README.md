@@ -26,42 +26,46 @@ The user will be able to identify any problem with your expenses by checking the
 
 ## Features
 
-- 
+- __The Header__
+
+    - Featured at the top of the page that shows the website logo, name, and website description.
+    - The header provides the user a better understanding of the purpose of the website.
+    - The header text is black, and the background color is green with a horizontal fade to white.  
     
-    
+    ![Header]()
 
-- 
+- __Input Box__
 
+    - The input box is also located at the top of the page on desktop devices and under the header on mobile devices.
+    - The input box provides places where the user can enter their details (salary, expense value, expense name).
+    - The input box has text color black and background white.
 
+    ![Input Box]()
 
+- __Expense Table__
 
-- 
-    
+    - The expense table contains a title with salary and balance and a list of expenses.
+    - The expense table title has a salary that will match the details the user sent in the input box, and a balance that will vary based on the expense value the user sent in the input box.
+    - The expense table list has a header, with all categories, and a list of expenses with the data the user sent before.
 
-    
+    ![Expense table]()
 
-- 
+- __Explanation Section__
 
-    
+    - The explanation section contains an image, and text describing the importance to tracking expenses.
+    - The explanation section is located under the expense table.
+    - The image is some coins in green colors with a light green background.
+    - The text has a title and a paragraph telling the user the importance to tracking your expenses.
 
-    
+    ![Explanation Section]()
 
-- 
+- __Cards Section__
 
-    
+    - The cards section is placed at the bottom of the page.
+    - The cards section contains 5 boxes with a title and text, each box has content explaining why it is important to monitor your expenses.
+    - The boxes have a background color white and a shadow box in green.
 
-
-    
-
-- 
-
-    
-
-- 
-
-    
-
-    
+    ![Cards Section]()   
 
 ## Skeleton Plane
 
@@ -75,9 +79,9 @@ The user will be able to identify any problem with your expenses by checking the
 
 ![Mobile Wireframe part2]()
 
-> 
+> The color patern in mainly white and green. White is to create a clean aspect in website, and green because is reminds money.
 
-> 
+> The website design is meant to be modern and minimalist.
 
 ## Testing
 
