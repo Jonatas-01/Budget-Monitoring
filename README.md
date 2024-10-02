@@ -107,7 +107,7 @@ The user will be able to identify any problem with your expenses by checking the
 
 - __Fixed Bugs__
 
-- 
+    - 
 
 - __Unfixed Bugs__
 
@@ -120,18 +120,22 @@ The user will be able to identify any problem with your expenses by checking the
 - HTML
     - No errors were returned when passing through the official W3C validator
     - Index.html
+
     ![W3C Html]()
     
     
 - CSS
     - No errors were returned when passing through the official (Jigsaw) validator
+
     ![Jigsaw CSS]()
 - Accessibility
     - Lighthouse test index.html
+
     ![Accessibility]()
 
 - JavaScript
     - No errors were returned when passing through the official (JShint) validator
+
     ![JShint]()
 
 ## Deployment
@@ -146,18 +150,19 @@ The user will be able to identify any problem with your expenses by checking the
 The live link can be found here - https://jonatas-01.github.io/Budget-Monitoring/
 
 ## Credits
- > 
+ > flaticon: (https://www.flaticon.com/free-icon/coins_6874315?term=coin&page=4&position=83&origin=search&related_id=6874315) 
+ 
+ > Coin image: (https://storyset.com/illustration/coins/rafiki) 
+
+ > Icons: (https://fontawesome.com/kits/16816afa88/setup)
 
 ### Content
 
-- 
+- Texts contents taken from ChatGPT
+- Icons in cards section taken from [Font Awesome](https://fontawesome.com/)
+- Favicon taken from [Flaticon](https://www.flaticon.com/free-icon/coins_6874315?term=coin&page=4&position=83&origin=search&related_id=6874315)
+- General lookup for JavaScript taken from [w3 school](https://www.w3schools.com/)
 
 ### Media
 
-- 
-
-## Acknowledgements
-
-- 
-
-> My mentor who provided me with constructive feedback and positive reinforcement where applicable.
+- Image taken from [Story Set](https://storyset.com/illustration/coins/rafiki)
