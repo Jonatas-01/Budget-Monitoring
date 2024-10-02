@@ -93,7 +93,8 @@ The user will be able to identify any problem with your expenses by checking the
 |Expenses details button creating a row in table| Pass |
 |Created row is not placed on top of other elements| Pass |
 |User prevented from submitting form without correct element| Pass |
-|Form Validation presents when incorrect input type is entered | Pass|
+|Form Validation presents when incorrect input type is entered | Pass |
+|Data stored in browser | Pass |
 
 **Testing for responsiveness**
 | Test |Outcome  |
