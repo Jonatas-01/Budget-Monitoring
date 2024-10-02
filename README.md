@@ -88,17 +88,17 @@ The user will be able to identify any problem with your expenses by checking the
 **Testing Links and Form**
 | Test | Outcome |
 |--|--|
-|All links on Navigation lead to their correct pages| Pass |
-|Contact button leads to contact section | Pass|
-|Footer social links all lead to their respective social media sites| Pass |
-|Sign Up form submits when all criteria is filled correctly| Pass |
+|All input text and numbers sending data correctly| Pass |
+|Set salary button add data to head table | Pass|
+|Expenses details button creating a row in table| Pass |
+|Created row is not placed on top of other elements| Pass |
 |User prevented from submitting form without correct element| Pass |
 |Form Validation presents when incorrect input type is entered | Pass|
 
 **Testing for responsiveness**
 | Test |Outcome  |
 |--|--|
-|Home page, about us, contact up, sign up, recipes page, sign up complete page displays correctly on mobile, tablet, laptop and desktop | Pass |
+|All elements is website displays correctly on mobile, tablet, laptop and desktop | Pass |
 
 > No Issues reported from the users
 
