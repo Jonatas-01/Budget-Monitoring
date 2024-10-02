@@ -243,6 +243,10 @@ table td button{
     text-align: start;
 }
 
+.cards-container{
+    margin-bottom: 40px;
+}
+
 .cards{
     margin: 30px 20px;
     padding: 15px;
