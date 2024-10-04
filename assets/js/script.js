@@ -28,7 +28,7 @@ function salaryFunc() {
     salaryFix.textContent = salaryValue;
     showBalance();
 
-    salaryInputEl.value = localStorage.getItem('salary')
+    salaryInputEl.value = localStorage.getItem("salary");
   }
   expensesInputEl.focus();
   storeData();
@@ -99,7 +99,7 @@ function expenses() {
         validation[0].style.display = "none";
         salaryInputEl.style.border = "";
       }, 2500);
-    } 
+    }
   }
 }
 
@@ -135,16 +135,16 @@ function editSalary() {
 }
 
 // Store data
-function storeData(){
-  localStorage.setItem('table', expenseList.innerHTML);
-  localStorage.setItem('salary', salaryFix.innerHTML);
-  localStorage.setItem('balance', balanceAmount.innerHTML);
+function storeData() {
+  localStorage.setItem("table", expenseList.innerHTML);
+  localStorage.setItem("salary", salaryFix.innerHTML);
+  localStorage.setItem("balance", balanceAmount.innerHTML);
 }
 
 // Show table
-function showData(){
-  expenseList.innerHTML = localStorage.getItem('table');
-  salaryFix.innerHTML = localStorage.getItem('salary')
-  balanceAmount.innerHTML = localStorage.getItem('balance');
+function showData() {
+  expenseList.innerHTML = localStorage.getItem("table");
+  salaryFix.innerHTML = localStorage.getItem("salary");
+  balanceAmount.innerHTML = localStorage.getItem("balance");
 }
 showData();
