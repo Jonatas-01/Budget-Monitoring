@@ -2,6 +2,8 @@
 const salaryInputEl = document.getElementById("salary-input");
 const salaryFix = document.getElementById("salary-fix");
 const balanceAmount = document.getElementById("balance-amount");
+const salaryBtn = document.getElementById("salary-btn")
+const expenseBtn = document.getElementById("expense-btn")
 const expensesInputEl = document.getElementById("expenses-input");
 const categoryInputEl = document.getElementById("category-input");
 const salaryBox = document.getElementById("salary-box");
@@ -12,6 +14,10 @@ const expenseList = document.getElementById("expense-list");
 let itemList = [];
 let itemId = 0;
 let salaryValue = 0;
+
+// Event Listener
+salaryBtn.addEventListener('click', salaryFunc)
+expenseBtn.addEventListener('click', expenses)
 
 // Salary Function
 function salaryFunc() {
@@ -30,7 +36,6 @@ function salaryFunc() {
 
     salaryInputEl.value = localStorage.getItem("salary");
   }
-  expensesInputEl.focus();
   storeData();
 }
 
@@ -126,13 +131,6 @@ expenseList.addEventListener("click", (e) => {
     storeData();
   }
 });
-
-// Edit salary function
-function editSalary() {
-  salaryBox.classList.remove("hide");
-  expensesBox.classList.add("hide");
-  tableDiv.classList.add("hide");
-}
 
 // Store data
 function storeData() {
