@@ -2,13 +2,10 @@
 const salaryInputEl = document.getElementById("salary-input");
 const salaryFix = document.getElementById("salary-fix");
 const balanceAmount = document.getElementById("balance-amount");
-const salaryBtn = document.getElementById("salary-btn")
-const expenseBtn = document.getElementById("expense-btn")
+const salaryBtn = document.getElementById("salary-btn");
+const expenseBtn = document.getElementById("expense-btn");
 const expensesInputEl = document.getElementById("expenses-input");
 const categoryInputEl = document.getElementById("category-input");
-const salaryBox = document.getElementById("salary-box");
-const expensesBox = document.getElementById("expenses-box");
-const tableDiv = document.getElementById("table-div");
 const validation = document.getElementsByClassName("validation");
 const expenseList = document.getElementById("expense-list");
 let itemList = [];
@@ -16,8 +13,8 @@ let itemId = 0;
 let salaryValue = 0;
 
 // Event Listener
-salaryBtn.addEventListener('click', salaryFunc)
-expenseBtn.addEventListener('click', expenses)
+salaryBtn.addEventListener("click", salaryFunc);
+expenseBtn.addEventListener("click", expenses);
 
 // Salary Function
 function salaryFunc() {
