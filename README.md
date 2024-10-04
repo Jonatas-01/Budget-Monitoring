@@ -71,13 +71,13 @@ The user will be able to identify any problem with your expenses by checking the
 
 - __Home Page Desktop Wireframe__
 
-![Desktop Wireframe]()
+![Desktop Wireframe](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/desktop-wireframe.png)
 
 - __Home Page Mobile Wireframe__
 
-![Mobile Wireframe part1]()
+![Mobile Wireframe part1](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/mobile-wireframe1.png)
 
-![Mobile Wireframe part2]()
+![Mobile Wireframe part2](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/mobile-wireframe2.png)
 
 > The color pattern in mainly white and green. White is to create a clean aspect in the website, and green because it reminds money.
 
@@ -121,13 +121,13 @@ The user will be able to identify any problem with your expenses by checking the
     - No errors were returned when passing through the official W3C validator
     - Index.html
 
-    ![W3C Html]()
+    ![W3C Html](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/html-validator.png)
     
     
 - CSS
     - No errors were returned when passing through the official (Jigsaw) validator
 
-    ![Jigsaw CSS]()
+    ![Jigsaw CSS](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/css-validator.png)
 - Accessibility
     - Lighthouse test index.html
 
@@ -136,7 +136,7 @@ The user will be able to identify any problem with your expenses by checking the
 - JavaScript
     - No errors were returned when passing through the official (JShint) validator
 
-    ![JShint]()
+    ![JShint](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/javascript-validator.png)
 
 ## Deployment
 

@@ -111,7 +111,7 @@ function addExpenses(expenses) {
         <tr>
             <td>${expenses.title}</td>
             <td>${expenses.amount} £</td>
-            <td><button class="btn-delete" data-id="${expenses.id}"><i class="fa-solid fa-trash-can"></i></button</td>
+            <td><button class="btn-delete" aria-label="delete-button" data-id="${expenses.id}"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`;
   expenseList.innerHTML += html;
   storeData();
