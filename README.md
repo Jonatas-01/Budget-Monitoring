@@ -4,7 +4,7 @@ The Budget Monitoring is a website page created for those who want to track your
 
 The user will be able to identify any problem with your expenses by checking the table that the Budget Monitoring provides. The user can also see the importance of tracking expenses with the cards located at the bottom of the website. 
 
-![Responsible screenshot]()
+![Responsible screenshot](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/mockup.png)
 
 ## User Stories
 
@@ -32,7 +32,7 @@ The user will be able to identify any problem with your expenses by checking the
     - The header provides the user a better understanding of the purpose of the website.
     - The header text is black, and the background color is green with a horizontal fade to white.  
     
-    ![Header]()
+    ![Header](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/header.png)
 
 - __Input Box__
 
@@ -40,7 +40,7 @@ The user will be able to identify any problem with your expenses by checking the
     - The input box provides places where the user can enter their details (salary, expense value, expense name).
     - The input box has text color black and background white.
 
-    ![Input Box]()
+    ![Input Box](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/input-box.png)
 
 - __Expense Table__
 
@@ -48,7 +48,7 @@ The user will be able to identify any problem with your expenses by checking the
     - The expense table title has a salary that will match the details the user sent in the input box, and a balance that will vary based on the expense value the user sent in the input box.
     - The expense table list has a header, with all categories, and a list of expenses with the data the user sent before.
 
-    ![Expense table]()
+    ![Expense table](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/table-section.png)
 
 - __Explanation Section__
 
@@ -57,7 +57,7 @@ The user will be able to identify any problem with your expenses by checking the
     - The image is some coins in green colors with a light green background.
     - The text has a title and a paragraph telling the user the importance to tracking your expenses.
 
-    ![Explanation Section]()
+    ![Explanation Section](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/explanation-section.png)
 
 - __Cards Section__
 
@@ -65,7 +65,7 @@ The user will be able to identify any problem with your expenses by checking the
     - The cards section contains 5 boxes with a title and text, each box has content explaining why it is important to monitor your expenses.
     - The boxes have a background color white and a shadow box in green.
 
-    ![Cards Section]()   
+    ![Cards Section](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/cards-section.png)   
 
 ## Skeleton Plane
 
