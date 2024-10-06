@@ -69,11 +69,11 @@ The user will be able to identify any problem with your expenses by checking the
 
 ## Skeleton Plane
 
-- __Home Page Desktop Wireframe__
+- __Desktop and Tablet Wireframe__
 
 ![Desktop Wireframe](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/desktop-wireframe.png)
 
-- __Home Page Mobile Wireframe__
+- __Mobile Wireframe__
 
 ![Mobile Wireframe part1](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/mobile-wireframe1.png)
 
@@ -107,13 +107,12 @@ The user will be able to identify any problem with your expenses by checking the
 
 - __Fixed Bugs__
 
-    - 
+    - After the user sends all the details and reloads the browser, the user cannot send another expense because the salary input is empty. The website does not recognize that the salary was sent in another section. The bug was fixed creating an conditional outside any function.
+        - The conditional says, if the salary local storage is not empty the salaryValue variable is 'true', that way the condition aplied in expenses function will be true.
 
 - __Unfixed Bugs__
 
-    - After the user sends all the details and reloads the browser, the user cannot send another expense because the salary input is empty. The website does not recognize that the salary was sent in another section.
-    
-    ![Salary Bug]()
+    - When salary and some expenses is send and then reload the browser, when the user send another expense the balance is calculated based on total salary instead of the balance before load the browser. 
 
 ### Validator Testing
 
