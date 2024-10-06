@@ -142,4 +142,11 @@ function showData() {
   salaryFix.innerHTML = localStorage.getItem("salary");
   balanceAmount.innerHTML = localStorage.getItem("balance");
 }
+
+// Aways when page loads will show the data in previus sections
 showData();
+
+// Conditional for expenses function works if the salary was sent in other section
+if(localStorage.getItem("salary") !== ''){
+  salaryValue = true
+}
