@@ -130,7 +130,7 @@ The user will be able to identify any problem with your expenses by checking the
 - Accessibility
     - Lighthouse test index.html
 
-    ![Accessibility]()
+    ![Accessibility](https://github.com/Jonatas-01/Budget-Monitoring/blob/main/assets/media/readme-img/lighthouse.png)
 
 - JavaScript
     - No errors were returned when passing through the official (JShint) validator
