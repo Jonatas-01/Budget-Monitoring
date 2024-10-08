@@ -153,7 +153,9 @@ The live link can be found here - https://jonatas-01.github.io/Budget-Monitoring
  
  > Coin image: (https://storyset.com/illustration/coins/rafiki) 
 
- > Icons: (https://fontawesome.com/kits/16816afa88/setup)
+ > Icons: (https://fontawesome.com/kits/16816afa88/setup)   
+
+ > Youtube help: (https://youtu.be/JH53_3aG308?si=z_YC9hxduc6n_e1z)
 
 ### Content
 
