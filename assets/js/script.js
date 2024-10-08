@@ -147,6 +147,6 @@ function showData() {
 showData();
 
 // Conditional for expenses function works if the salary was sent in other section
-if(localStorage.getItem("salary") !== ''){
-  salaryValue = true
+if (localStorage.getItem("salary") !== "") {
+  salaryValue = true;
 }
