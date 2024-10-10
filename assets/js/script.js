@@ -30,10 +30,7 @@ function salaryFunc() {
   } else {
     salaryFix.textContent = salaryValue;
     showBalance();
-
-    salaryInputEl.value = localStorage.getItem("salary");
   }
-  storeData();
 }
 
 // Balance Function
@@ -41,7 +38,6 @@ function showBalance() {
   const expenses = totalExpenses();
   const total = parseInt(salaryFix.textContent) + expenses;
   balanceAmount.textContent = total.toFixed(1);
-  storeData();
 }
 
 // Calculate Expenses Function
@@ -114,7 +110,6 @@ function addExpenses(expenses) {
             <td><button class="btn-delete" aria-label="delete-button" data-id="${expenses.id}"><i class="fa-solid fa-trash-can"></i></button</td>
         </tr>`;
   expenseList.innerHTML += html;
-  storeData();
 }
 
 // Delete Row Function
@@ -125,28 +120,5 @@ expenseList.addEventListener("click", (e) => {
     let element = e.target.parentElement.parentElement;
     element.remove();
     showBalance();
-    storeData();
   }
 });
-
-// Store data
-function storeData() {
-  localStorage.setItem("table", expenseList.innerHTML);
-  localStorage.setItem("salary", salaryFix.innerHTML);
-  localStorage.setItem("balance", balanceAmount.innerHTML);
-}
-
-// Show table
-function showData() {
-  expenseList.innerHTML = localStorage.getItem("table");
-  salaryFix.innerHTML = localStorage.getItem("salary");
-  balanceAmount.innerHTML = localStorage.getItem("balance");
-}
-
-// Aways when page loads will show the data in previus sections
-showData();
-
-// Conditional for expenses function works if the salary was sent in other section
-if (localStorage.getItem("salary") !== "") {
-  salaryValue = true;
-}

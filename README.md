@@ -13,8 +13,7 @@ The user will be able to identify any problem with your expenses by checking the
 > As a user I want to be able to set my expenses details, as value and name.    
 > As a user I want to have a clar table with my expenses details.   
 > As a user I want to be able to see my balance after send expenses.    
-> As a user I want to be able to delete an expense in case I sent the wrong details.    
-> As a user I want to be able to see my budget after reload the page.   
+> As a user I want to be able to delete an expense in case I sent the wrong details.      
 
 ### Business Owner
 >As the site owner I want to provide a clear website design to users.    
@@ -94,7 +93,6 @@ The user will be able to identify any problem with your expenses by checking the
 |Created row is not placed on top of other elements| Pass |
 |User prevented from submitting the form without correct element| Pass |
 |Form Validation presents the when incorrect input type is entered | Pass |
-|Data stored in browser | Pass |
 
 **Testing for responsiveness**
 | Test |Outcome  |
@@ -105,14 +103,9 @@ The user will be able to identify any problem with your expenses by checking the
 
 ### Bugs
 
-- __Fixed Bugs__
-
-    - After the user sends all the details and reloads the browser, the user cannot send another expense because the salary input is empty. The website does not recognize that the salary was sent in another section. The bug was fixed creating an conditional outside any function.
-        - The conditional says, if the salary local storage is not empty the salaryValue variable is 'true', that way the condition aplied in expenses function will be true.
-
-- __Unfixed Bugs__
-
-    - When salary and some expenses is send and then reload the browser, when the user send another expense the balance is calculated based on total salary instead of the balance before load the browser. 
+    - One of the features I would like to add in this website was LocalStorage, but after some bugs like:
+        - When salary and some expenses is send and then reload the browser, when the user send another expense the balance is calculated based on total salary instead of the balance before load the browser.
+        - This bug can be solved by storing the data in JSON, because of time I opt to add the feature in a later update.
 
 ### Validator Testing
 
